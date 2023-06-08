@@ -1,0 +1,65 @@
+.table {
+  font-size: 12px;
+  text-align: center;
+  border-collapse: collapse;
+  th,
+  td {
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-left: solid 1px #3e4760;
+    border-right: solid 1px #3e4760;
+    border-top: solid 1px #3e4760;
+  }
+  th {
+    background-color: #909399;
+  }
+  td {
+    background: white;
+    color: #333;
+  }
+}
+.cross-table,
+.normal-table {
+  height: 100%;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  .table-content {
+    padding: 20px;
+    height: calc(100% - 32px);
+    width: 100%;
+    overflow: auto;
+    table {
+      table-layout: fixed;
+    }
+    .tbody-table {
+      display: block;
+      overflow-y: auto;
+      td {
+        border-bottom: solid 1px #3e4760;
+      }
+    }
+    th,
+    td {
+      min-width: 79px;
+      span {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 5px;
+        min-width: 79px;
+        line-height: 30px;
+        height: 30px;
+        cursor: default;
+      }
+    }
+  }
+  .paging-box {
+    background: white;
+    padding-left: 25px;
+    border-top: 1px solid #e3e3e3;
+  }
+}

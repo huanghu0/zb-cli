@@ -1,0 +1,52 @@
+@charset "utf-8";
+//这里主题色主要是给自己写样式切换用的，element-reset里面是element组件的样式
+$textColor: var(--textColor,#555);;
+$bgColor:var(--bgColor,rgb(248, 248, 248));
+$primaryColor: var(--primaryColor,#55aeb1);
+$primaryBgColor:var(--primaryBgColor,#f3feff);
+$boderColor:var(--boderColor,#e6e6e6);
+
+$fontNormal:var(--fontNormal,14px);
+$fontLogo:var(--fontLogo,32px);;
+$fontHead:var(--fontHead,20px);
+@mixin flex-div($direction:row,$justify:center,$align:center,$wrap:nowrap) {
+  display:flex;
+  flex-direction: $direction;
+  justify-content:$justify;
+  align-items:$align;
+  flex-wrap:$wrap;
+}
+@mixin wrapText() {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+// el-form左边label,右边el-form-item-content要占据剩余全部宽度的时候可以这么写。width是label的宽度
+// el-form-item.without-120
+// .without-120 {
+//   @include itemWithoutLable(120px);
+// }
+@mixin itemWithoutLable($totalWidth,$width) {
+  width:$totalWidth;
+  &::v-deep .el-form-item__content {
+    width:calc(100% - #{$width});
+  }
+}
+
+
+@mixin abRT($right:0,$top:0) {
+  position: absolute;
+  right:$right;
+  top:$top;
+}
+@mixin abLT($left:0,$top:0) {
+  position: absolute;
+  left:$left;
+  top:$top;
+}
+@mixin itemWithoutLable($width) {
+  width:100%;
+  &::v-deep .el-form-item__content {
+    width:calc(100% - #{$width});
+  }
+}

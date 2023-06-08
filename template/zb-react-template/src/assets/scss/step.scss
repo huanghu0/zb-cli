@@ -1,0 +1,41 @@
+.step-box {
+  max-height: 50vh;
+  overflow: auto;
+  min-height: 325px;
+  .step-item {
+    display: flex;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0.6px;
+    line-height: 20px;
+    .step-left {
+      flex: 0 0 84px;
+    }
+    .step-middle {
+      margin: 0 25px;
+      flex: 0 0 24px;
+      .step-circle {
+        color: white;
+        background: #00a3ff;
+        border-radius: 50%;
+        height: 24px;
+        width: 24px;
+        text-align: center;
+        line-height: 24px;
+      }
+      .step-line {
+        width: 2px;
+        background: #96d9ff;
+        height: 100%;
+        margin: 0 auto;
+      }
+    }
+    .step-right {
+      padding-bottom: 40px;
+      p {
+        word-break: break-all;
+        word-wrap: break-word;
+      }
+    }
+  }
+}

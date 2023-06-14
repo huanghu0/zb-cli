@@ -58,7 +58,7 @@ const Header = memo(() => {
     <div className="header">
       <div className='logo'>
         <img src={require('@/assets/img/logo.png')} />
-        <h1>大数据分析平台</h1>
+        <h1>XXXXXXXX平台</h1>
       </div>
       <nav className="nav">
        {
@@ -71,7 +71,7 @@ const Header = memo(() => {
         })
        }
       </nav>
-      <Tooltip placement="bottom" title='用户手册'>
+      {/* <Tooltip placement="bottom" title='用户手册'>
         <div className="help">
           <a href="https://oa-pan.eastmoney.com/ddwiki/space/doc?spaceId=6749&fileUuid=4bf36e33-adb6-4a9a-aaea-b97717b3c4a3" target="_blank">
             <span className='fa'>
@@ -79,7 +79,7 @@ const Header = memo(() => {
             </span>
           </a>
         </div>
-      </Tooltip>
+      </Tooltip> */}
       <div className="user">
         <img src={require('@/assets/img/head.png')} />
         <Dropdown
@@ -90,7 +90,7 @@ const Header = memo(() => {
           placement="bottom"
         >
           <div className="user-dropdown">
-            <span>王凡</span>
+            <span>admin</span>
             <CaretUpFilled></CaretUpFilled>          
           </div>
         </Dropdown>

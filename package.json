@@ -1,10 +1,10 @@
 {
-  "name": "zb-cli",
+  "name": "zb-create-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "zb-cli": "./bin/index.js"
+    "zb-create-app": "./bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

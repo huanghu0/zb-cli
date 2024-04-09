@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require("../core/index")
+require("../dist/index")

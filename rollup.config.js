@@ -1,19 +1,22 @@
 const resolve = require('@rollup/plugin-node-resolve') ;
 const commonjs = require('@rollup/plugin-commonjs') ;
 const json = require('@rollup/plugin-json');
-const analyze = require('rollup-plugin-analyzer')
+const { visualizer  } = require('rollup-plugin-visualizer')
+const terser = require("@rollup/plugin-terser")
+
 
 module.exports = {
 	input: 'core/index.js',
 	output: {
-        file:'dist/index.js',
-		format: 'cjs'
+    file:'dist/index.js',
+		format: 'cjs',
+    plugins:[terser()]
 	},
     plugins:[
         resolve(),
         json(),
         commonjs(),
-        analyze()
+        visualizer() 
     ],
     external:['electron']    
 }

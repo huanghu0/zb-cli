@@ -31,7 +31,8 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.14.1",
-    "rollup-plugin-analyzer": "^4.0.0"
+    "rollup-plugin-visualizer": "^5.12.0"
   }
 }

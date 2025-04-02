@@ -1,22 +1,13 @@
-const resolve = require('@rollup/plugin-node-resolve') ;
-const commonjs = require('@rollup/plugin-commonjs') ;
-const json = require('@rollup/plugin-json');
-const { visualizer  } = require('rollup-plugin-visualizer')
-const terser = require("@rollup/plugin-terser")
+import { terser } from 'rollup-plugin-terser';
 
-
-module.exports = {
-	input: 'core/index.js',
-	output: {
-    file:'dist/index.js',
-		format: 'cjs',
-    plugins:[terser()]
-	},
-    plugins:[
-        resolve(),
-        json(),
-        commonjs(),
-        visualizer() 
-    ],
-    external:['electron']    
-}
+export default {
+  input: 'index.js', // 入口文件路径
+  output: {
+    file: 'dist/index.js', // 输出文件路径
+    format: 'esm', // 输出格式，如 cjs、esm 等
+    sourcemap: false, // 是否生成 source map
+  },
+  plugins: [
+    terser(), // 压缩代码
+  ],
+};
